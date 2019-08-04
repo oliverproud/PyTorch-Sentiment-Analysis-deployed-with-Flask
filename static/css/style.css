@@ -1,0 +1,33 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+#review input {
+  text-align: center;
+  display: block;
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255);
+}
+
+#review #btn-submit {
+  background: rgb(41, 204, 158);
+  border: none;
+  width: 340px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#review #btn-submit:hover {
+  background: rgba(41, 204, 158, 0.5);
+}
+
+#review #btn-submit:active {
+  color: #999999;
+}
