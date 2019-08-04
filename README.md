@@ -9,4 +9,4 @@
 Resources I used and found helpful: 
 
 - <https://github.com/bentrevett/pytorch-sentiment-analysis>
-
+- <https://github.com/choonghee-lee/Deploying-a-Sentiment-Analysis-Model>
