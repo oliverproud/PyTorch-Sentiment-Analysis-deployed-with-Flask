@@ -9,3 +9,4 @@
 Resources I used and found helpful: 
 
 ..* <https://github.com/bentrevett/pytorch-sentiment-analysis>
+⋅⋅* Unordered sub-list. 
