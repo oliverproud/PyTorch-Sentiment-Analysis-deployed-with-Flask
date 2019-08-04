@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <meta content="images/logo.png" itemprop="image">
+  <link rel='shortcut icon' type="image/png" href='/static/images/logo.png'/>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>Sentiment Classifier</title>
+</head>
+
+<body>
+
+  <form action="/">
+    <div id="review">
+      <br>
+      <h1>Movie Review Sentiment Classifier</h1>
+      <p>Enter a review:</p>
+
+      <center>
+        <input align="center" type="text" name="text_in" maxlength="500" placeholder="enter review here" required>
+      </center>
+      <br>
+
+      <center>
+        <button id="btn-submit" type="submit" value="Submit" align="center">Submit</button>
+      </center>
+
+      <br>
+
+      <p>
+        {{ header_review }} <!-- Displays "Review:" when a review has been submitted" !-->
+        <br>
+        {{ text_in }} <!-- Displays the review entered by the user below review header!-->
+        <br>
+        <br>
+        {{ header_sentiment }} <!-- Displays "Sentiment:" above a review that has been submitted and sentiment determined" !-->
+        <br>
+        {{ prediction }} <!-- Displays the model predicted sentiment when a review has been submitted" !-->
+      </p>
+    </div>
+  </form>
+</body>
+
+</html>
