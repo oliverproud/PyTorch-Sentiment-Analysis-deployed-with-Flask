@@ -4,7 +4,7 @@
 
 As this was my first "full stack" project I wanted to keep it relatively simple and quick by using a Convolutional model and deploying it on Heroku using Flask. I will later explore using a BERT or most likely XLNET architecture from the Hugging Face team and deploying it to AWS to gain experience.
 
-If you want to check out my deployed version you can head to <http://sentiment.oliverproud.com>. Note: the server will take around 30 seconds to wake up. 
+If you want to check out my deployed version you can head to <sentiment.oliverproud.com>. Note: the server will take around 30 seconds to wake up. 
 
 If you have any questions, feedback or problems of any kind, get in touch by messaging me on [Twitter](https://twitter.com/oliverwproud) or submitting an issue.
 
