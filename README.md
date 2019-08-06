@@ -1,4 +1,4 @@
-# full-ish-stack-sentiment-analysis
+# Full-ish Stack Sentiment Analysis
 
 3 layer Convolutional model trained on IMDb dataset (will use a different dataset soon), using GloVe pretrained word embedddings.
 
