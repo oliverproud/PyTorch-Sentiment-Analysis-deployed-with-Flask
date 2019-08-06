@@ -6,7 +6,7 @@ As this was my first "full stack" project I wanted to keep it relatively simple 
 
 If you want to check out my deployed version you can head to [sentiment.oliverproud.com](http://sentiment.oliverproud.com). Note: the server will take around 30 seconds to wake up. 
 
-If you have any questions, feedback or problems of any kind, get in touch by messaging me on [Twitter](https://twitter.com/oliverwproud) or submitting an issue.
+If you have any questions, feedback or problems of any kind, get in touch by messaging me on [Twitter - @oliverwproud](https://twitter.com/oliverwproud) or submitting an issue.
 
 ### References
 
