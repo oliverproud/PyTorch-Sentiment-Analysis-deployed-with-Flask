@@ -1,4 +1,4 @@
-# Full-ish Stack Sentiment Analysis
+# Deploying a PyTorch model with Flask
 
 3 layer Convolutional model trained on IMDb dataset (will use a different dataset soon), using GloVe pretrained word embedddings.
 
