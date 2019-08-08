@@ -7,6 +7,8 @@ import pickle
 import torchtext
 import torch.nn.functional as F
 import numpy as np
+from pathlib import Path
+import requests
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -19,7 +21,7 @@ class CNN(nn.Module):
         super().__init__()
 
         self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx = pad_idx)
-        
+
         '''
         ModuleList means an arbirtary sized list of filter sizes can be provided
         and the list comprehension will create conv layers for each of the filters
@@ -33,7 +35,7 @@ class CNN(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, text):
-        
+
         '''
         In PyTorch RNNs want the input with batch dim second, CNNs want the batch dim first
         we permute the input to make it the right shape for the CNN
@@ -42,7 +44,7 @@ class CNN(nn.Module):
 
         # Text passed through embedding layer to get embeddings
         embedded = self.embedding(text)
-        
+
         '''
         A conv layer wants the second dim of the input to be a channel dim
         text does not have a channel dim, so the tensor is unsqueezed to create one
@@ -69,12 +71,31 @@ class CNN(nn.Module):
         # passed through linear layer to make predictions
         return self.fc(cat)
 
-checkpoint_path = './static/models/conv-sentiment_model1.pt'
-model = CNN(25002, 300, 100, [3,4,5], 1, 0.55, 1)
-model.load_state_dict(torch.load(checkpoint_path, map_location='cpu'))
+data_dir = 'static/models'
+s3_model_url = 'https://sent-model.s3.eu-west-2.amazonaws.com/conv-sentiment_model1.pt'
 
-word_dict_path = os.path.join('./static/models', 'word_dict.pkl')
-with open(word_dict_path, 'rb') as f:
+path_to_model = os.path.join(data_dir, 'conv-sentiment_model1.pt')
+if not os.path.exists(path_to_model):
+    print("Model weights not found, downloading from S3...")
+    os.makedirs(os.path.join(data_dir), exist_ok=True)
+    filename = Path(path_to_model)
+    r = requests.get(s3_model_url)
+    filename.write_bytes(r.content)
+
+model = CNN(25002, 300, 100, [3,4,5], 1, 0.55, 1)
+model.load_state_dict(torch.load(path_to_model, map_location='cpu'))
+
+s3_word_dict_url = 'https://sent-model.s3.eu-west-2.amazonaws.com/word_dict.pkl'
+
+path_to_dict = os.path.join(data_dir, 'word_dict.pkl')
+if not os.path.exists(path_to_dict):
+    print("Word dict not found, downloading from S3...")
+    os.makedirs(os.path.join(data_dir), exist_ok=True)
+    filename = Path(path_to_dict)
+    r = requests.get(s3_word_dict_url)
+    filename.write_bytes(r.content)
+
+with open(path_to_dict, 'rb') as f:
     TEXT = pickle.load(f)
 
 def predict_sentiment(sentence, model=model,min_len = 5):
