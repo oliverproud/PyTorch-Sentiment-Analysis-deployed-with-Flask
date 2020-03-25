@@ -10,6 +10,10 @@ COPY . ./
 # Install production dependencies.
 RUN pip install Flask gunicorn
 
+# Copy application dependency manifests to the container image.
+# Copying this separately prevents re-running pip install on every code change.
+COPY requirements.txt .
+
 RUN pip install -r requirements.txt
 
 # Run the web service on container startup. Here we use the gunicorn
