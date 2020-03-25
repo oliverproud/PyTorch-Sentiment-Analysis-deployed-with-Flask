@@ -1,3 +1,5 @@
 .DS_Store
 __pycache__
 venv
+static/models/conv-sentiment_model1.pt
+static/models/word_dict.pkl

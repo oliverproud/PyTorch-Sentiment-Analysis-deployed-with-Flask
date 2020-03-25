@@ -1,0 +1,7 @@
+venv
+.git
+__pycache__
+static/models
+.DS_Store
+README.md
+LICENSE
