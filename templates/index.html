@@ -14,19 +14,15 @@
 <body>
 
   <form action="/">
-    <div id="review">
+    <div class="main">
       <br>
       <h1>Movie Review Sentiment Classifier</h1>
       <p>Enter a review:</p>
 
-      <center>
-        <input align="center" type="text" name="text_in" maxlength="500" placeholder="enter review here" required>
-      </center>
-      <br>
-
-      <center>
-        <button id="btn-submit" type="submit" value="Submit" align="center">Submit</button>
-      </center>
+      <div class="inputWrapper">
+        <input id="text" align="center" type="text" name="text_in" placeholder="enter review" required>
+        <button id="submit-btn" type="submit" value="Submit">Submit</button>
+      </div>
 
       <br>
 

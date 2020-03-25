@@ -1,9 +1,21 @@
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  font-weight: lighter;
 }
 
-#review input {
+.main h1{
+  font-weight: lighter;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.main p{
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main input{
   text-align: center;
   display: block;
   width: 320px;
@@ -11,9 +23,25 @@ body {
   padding: 10px;
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom:15px;
 }
 
-#review #btn-submit {
+.main input{
+  text-align: center;
+  display: block;
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom:15px;
+}
+
+.main #submit-btn{
   background: rgb(41, 204, 158);
   border: none;
   width: 340px;
@@ -22,12 +50,10 @@ body {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
-#review #btn-submit:hover {
-  background: rgba(41, 204, 158, 0.5);
-}
-
-#review #btn-submit:active {
-  color: #999999;
+.inputWrapper{
+  text-align: center;
 }
