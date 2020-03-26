@@ -9,6 +9,7 @@ import torch.nn.functional as F
 import numpy as np
 from pathlib import Path
 import requests
+import re
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -101,6 +102,10 @@ with open(path_to_dict, 'rb') as f:
 def predict_sentiment(sentence, model=model,min_len = 5):
 
     model.eval()
+
+    sentence = sentence.lower()
+    # Remove punctuation
+    sentence = re.sub(r'[^\w\s]','', sentence)
 
     tokenized = [tok.text for tok in nlp.tokenizer(sentence)]
 
