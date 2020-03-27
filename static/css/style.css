@@ -4,18 +4,18 @@ body {
   font-weight: lighter;
 }
 
-.main h1{
+.main h1 {
   font-weight: lighter;
   padding: 20px;
   margin: 0 auto;
 }
 
-.main p{
+.main p {
   margin: 0 auto;
   padding: 20px;
 }
 
-.main input{
+.main input {
   text-align: center;
   display: block;
   width: 320px;
@@ -25,10 +25,10 @@ body {
   border: 1px solid rgba(255, 255, 255);
   border-radius: 5px;
   margin: 0 auto;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
-.main input{
+.main input {
   text-align: center;
   display: block;
   width: 320px;
@@ -38,10 +38,10 @@ body {
   border: 1px solid rgba(255, 255, 255);
   border-radius: 5px;
   margin: 0 auto;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
-.main #submit-btn{
+.main #submit-btn {
   background: rgb(41, 204, 158);
   border: none;
   width: 340px;
@@ -54,6 +54,6 @@ body {
   border-radius: 5px;
 }
 
-.inputWrapper{
+.inputWrapper {
   text-align: center;
 }
