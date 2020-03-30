@@ -41,6 +41,12 @@ body {
   margin-bottom: 15px;
 }
 
+hr {
+  border-width: 1px;
+  border: 0.5px solid #cfd4da;
+  width: 340px;
+}
+
 .main #submit-btn {
   background: rgb(41, 204, 158);
   border: none;
