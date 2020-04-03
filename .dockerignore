@@ -1,0 +1,12 @@
+venv
+__pycache__
+.DS_Store
+README.md
+Dockerfile
+*.pyc
+*.pyo
+*.pyd
+models
+/images
+.git
+LICENSE
