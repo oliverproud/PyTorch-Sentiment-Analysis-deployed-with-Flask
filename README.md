@@ -6,7 +6,7 @@ Try the demo at [sentiment.oliverproud.com](https://sentiment.oliverproud.com)
 
 3 layer Convolutional model trained on IMDb dataset, using GloVe pretrained word embedddings.
 
-As this was my first "full stack" project I wanted to keep it relatively simple and quick by using a Convolutional model and deploying it on Heroku using Flask (I have now re-deployed the model on Google Cloud Run). ~~I will later explore using a BERT or most likely XLNET architecture from the Hugging Face team~~ ✔[See here](https://github.com/oliverproud/bert-sequence-classification).
+As this was my first "full stack" project I wanted to keep it relatively simple and quick by using a Convolutional model and deploying it on Heroku using Flask (I have now re-deployed the model on Google Cloud Run). ~~I will later explore using a BERT or most likely XLNET architecture from the Hugging Face team~~ ✔ [See here](https://github.com/oliverproud/bert-sequence-classification).
 
 The model weights and word dictionary are available to download from S3:
 - [model weights](https://sent-model.s3.eu-west-2.amazonaws.com/conv-sentiment_model1.pt) 
