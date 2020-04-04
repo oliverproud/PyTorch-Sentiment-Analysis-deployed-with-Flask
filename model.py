@@ -1,15 +1,17 @@
 # Contains the functions to load the state dict into the model and data preprocessing
-import torch
-import torch.nn as nn
-import spacy
-import os
-import pickle
-import torchtext
+from download import download_model
 import torch.nn.functional as F
-import numpy as np
 from pathlib import Path
+import torch.nn as nn
+import numpy as np
+import torchtext
 import requests
+import pickle
+import spacy
+import torch
+import os
 import re
+
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -75,29 +77,14 @@ class CNN(nn.Module):
         return self.fc(cat)
 
 
-data_dir = 'static/models'
 s3_model_url = 'https://sent-model.s3.eu-west-2.amazonaws.com/conv-sentiment_model1.pt'
-
-path_to_model = os.path.join(data_dir, 'conv-sentiment_model1.pt')
-if not os.path.exists(path_to_model):
-    print("Model weights not found, downloading from S3...")
-    os.makedirs(os.path.join(data_dir), exist_ok=True)
-    filename = Path(path_to_model)
-    r = requests.get(s3_model_url)
-    filename.write_bytes(r.content)
+path_to_model = download_model(s3_model_url, model_name="conv-sentiment_model1.pt")
 
 model = CNN(25002, 300, 100, [3, 4, 5], 1, 0.55, 1)
 model.load_state_dict(torch.load(path_to_model, map_location='cpu'))
 
 s3_word_dict_url = 'https://sent-model.s3.eu-west-2.amazonaws.com/word_dict.pkl'
-
-path_to_dict = os.path.join(data_dir, 'word_dict.pkl')
-if not os.path.exists(path_to_dict):
-    print("Word dict not found, downloading from S3...")
-    os.makedirs(os.path.join(data_dir), exist_ok=True)
-    filename = Path(path_to_dict)
-    r = requests.get(s3_word_dict_url)
-    filename.write_bytes(r.content)
+path_to_dict = download_model(s3_word_dict_url, model_name="word_dict.pkl")
 
 with open(path_to_dict, 'rb') as f:
     TEXT = pickle.load(f)
