@@ -6,7 +6,7 @@ Dockerfile
 *.pyc
 *.pyo
 *.pyd
-models
-/images
+static/models
+static/images
 .git
 LICENSE
