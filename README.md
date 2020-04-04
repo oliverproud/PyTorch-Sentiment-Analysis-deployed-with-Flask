@@ -1,5 +1,7 @@
 # Deploying a PyTorch model with Flask
 
+![Build and Deploy to Cloud Run](https://github.com/oliverproud/PyTorch-Sentiment-Analysis-deployed-with-Flask/workflows/Build%20and%20Deploy%20to%20Cloud%20Run/badge.svg?branch=master)
+
 Try the demo at [sentiment.oliverproud.com](https://sentiment.oliverproud.com)
 
 
