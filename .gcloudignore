@@ -1,7 +1,7 @@
 venv
 .git
 __pycache__
-static/models
+static/models/
 .DS_Store
 README.md
 LICENSE
