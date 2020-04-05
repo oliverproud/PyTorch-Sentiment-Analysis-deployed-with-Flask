@@ -1,6 +1,8 @@
 # Deploying a PyTorch model with Flask
 
 ![Build and Deploy to Cloud Run](https://github.com/oliverproud/PyTorch-Sentiment-Analysis-deployed-with-Flask/workflows/Build%20and%20Deploy%20to%20Cloud%20Run/badge.svg?branch=master)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/oliverproud/pytorch-sent-analysis-flask?logo=Docker&logoColor=FFF)](https://hub.docker.com/repository/docker/oliverproud/pytorch-sent-analysis-flask)
+[![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fsentiment.oliverproud.com)](https://sentiment.oliverproud.com)
 
 Try the demo at [sentiment.oliverproud.com](https://sentiment.oliverproud.com)
 
