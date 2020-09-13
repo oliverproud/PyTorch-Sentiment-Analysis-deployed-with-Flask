@@ -94,6 +94,6 @@ If you want to check out my deployed version you can head to [sentiment.oliverpr
 Resources I used and found helpful:
 
 - <https://github.com/bentrevett/pytorch-sentiment-analysis>
-- <https://github.com/choonghee-lee/Deploying-a-Sentiment-Analysis-Model>
+- <https://cloud.google.com/run/docs/quickstarts/build-and-deploy#python>
 - <http://josh-tobin.com/troubleshooting-deep-neural-networks.html>
 - <https://spacy.io/models>
