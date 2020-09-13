@@ -13,7 +13,7 @@ Try the demo at [sentiment.oliverproud.com](https://sentiment.oliverproud.com)
 As this was my first "full stack" project I wanted to keep it relatively simple and quick by using a Convolutional model and deploying it on Heroku using Flask (I have now re-deployed the model on Google Cloud Run). ~~I will later explore using a BERT or most likely XLNET architecture from the Hugging Face team~~ ✔ [See here](https://github.com/oliverproud/bert-sequence-classification).
 
 The model weights and word dictionary are available to download from S3:
-- [model weights](https://sent-model.s3.eu-west-2.amazonaws.com/conv-sentiment_model1.pt) 
+- [model weights](https://sent-model.s3.eu-west-2.amazonaws.com/conv-sentiment_model1.pt)
 - [word dict](https://sent-model.s3.eu-west-2.amazonaws.com/word_dict.pkl)
 
 # Installation
@@ -76,6 +76,13 @@ Install the requirements with:
 pip3 install -r requirements.txt
 ```
 
+### Deploying to Google Cloud Run
+Please see this [quick start guide](https://cloud.google.com/run/docs/quickstarts/build-and-deploy#python) from Google on how to deploy to Google Cloud Run.
+
+If you follow just part one and create the project, then navigate to the Cloud Run console and find the button named `SET UP CONTINUOUS DEPLOYMENT` and from there you will be able to deploy directly from your GitHub repo using the Dockerfile.
+
+Alternatively just follow the entire quick start guide.
+
 ### Contact
 
 If you have any questions, feedback or problems of any kind, get in touch by messaging me on [Twitter - @oliverwproud](https://twitter.com/oliverwproud) or by submitting an issue.
@@ -84,7 +91,7 @@ If you want to check out my deployed version you can head to [sentiment.oliverpr
 
 ### References
 
-Resources I used and found helpful: 
+Resources I used and found helpful:
 
 - <https://github.com/bentrevett/pytorch-sentiment-analysis>
 - <https://github.com/choonghee-lee/Deploying-a-Sentiment-Analysis-Model>
