@@ -81,7 +81,7 @@ Please see this [quick start guide](https://cloud.google.com/run/docs/quickstart
 
 If you follow just part one and create the project, then navigate to the Cloud Run console and find the button named `SET UP CONTINUOUS DEPLOYMENT` and from there you will be able to deploy directly from your GitHub repo using the Dockerfile.
 
-Alternatively just follow the entire quick start guide.
+Alternatively, follow the entire quick start guide.
 
 ### Contact
 
